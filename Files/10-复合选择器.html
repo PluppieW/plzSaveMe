@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 后代选择器 元素1 元素2 {样式声明} */
+        ol li {
+            color: pink;
+        }
+
+        /* 子元素选择器 元素1 > 元素2 {样式声明} */
+        .nav>a {
+            font-size: 30px;
+        }
+
+        p>a {
+            font-size: 40px;
+        }
+
+        /* 并集选择器 元素1 , 元素2 {样式声明} */
+        h2,
+        p,
+        .pig li {
+            color: hotpink;
+            font-weight: 800;
+        }
+
+        /* 伪类选择器 链接伪类 */
+        /* 未访问的链接 a:link */
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* 已访问的链接 a:visited */
+        a:visited {
+            color: lightseagreen;
+        }
+
+        /* 鼠标经过的链接 a:hover */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 鼠标点击时的链接 a:active */
+        a:active {
+            color: springgreen;
+        }
+
+        /* 伪类选择器 focus伪类 */
+        /* 选取有光标的input表单元素 */
+        input:focus {
+            background-color: lightblue;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>child</li>
+        <li>child</li>
+        <li>child</li>
+    </ol>
+    <ul>
+        <li>child</li>
+        <li>child</li>
+        <li>child</li>
+    </ul>
+    <div class="nav">
+        <a href="http://www.baidu.com">son</a>
+        <a href="http://www.qq.com">qq</a>
+        <p>
+            <a href="#">grandson</a>
+        </p>
+    </div>
+    <div>
+        <h2>11</h2>
+        <p>22</p>
+        <span>33333</span>
+        <ul class="pig">
+            <li>pig11</li>
+            <li>pig22</li>
+            <li>pig33</li>
+        </ul>
+    </div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+</body>
+
+</html>

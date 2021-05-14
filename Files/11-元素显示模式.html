@@ -1,0 +1,58 @@
+<!-- h1-h6 p div ul ol li等 块级元素
+独占一行，高度 宽度 外边距 内边距可控
+宽度默认是容器（父级宽度）的100%，可放行内或块级元素-->
+
+<!-- a strong b em i del s ins u span等 行内元素
+相邻行内元素在一行上，一行可显示多个，高度 宽度直接设置无效
+默认宽度就是内容的宽度，行内元素只能容纳文本或者其他行内元素  -->
+<!-- <a>可以放块元素，需要转换块级模式 -->
+
+<!-- img input td 行内块元素
+和相邻行内元素（行内块）在一行上，一行可以显示多个
+默认宽度就是内容的宽度，高度 宽度 外边距 内边距可控 -->
+
+<!-- !display:block 转换为块级元素 -->
+<!-- display:inline 转换为行内元素 -->
+<!-- !display:inline-block 转换为行内块 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式</title>
+    <style>
+        a {
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        div {
+            display: inline;
+            width: 300px;
+            height: 100px;
+            background-color: darkgoldenrod;
+        }
+
+        span {
+            display: inline-block;
+            width: 300px;
+            height: 30px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Somebody</a>
+    <a href="#">Nobody</a>
+    <div>11111111</div>
+    <div>22222222</div>
+    <span>3333333</span>
+    <span>4444444</span>
+</body>
+
+</html>

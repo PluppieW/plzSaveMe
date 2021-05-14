@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>元素显示与隐藏</title>
+        <style>
+            .pig {
+                display: block;
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+            .george {
+                width: 200px;
+                height: 200px;
+                background-color: blueviolet;
+            }
+            .baba {
+                visibility: hidden;
+                height: 300px;
+                width: 300px;
+                background-color: chartreuse;
+            }
+            .mama {
+                visibility: visible;
+                height: 300px;
+                width: 300px;
+                background-color: coral;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- display:block(转换为块级元素同时显示元素)
+             display:none(隐藏元素,不再占有原有位置) -->
+        <div class="pig">pig</div>
+        <div class="george">george</div>
+        <!-- visibility:visible(元素可视)/hidden(元素隐藏,占有原有位置) -->
+        <div class="baba">dad</div>
+        <div class="mama">mom</div>
+        <!-- overflow:visible(溢出显示)/hidden(溢出隐藏)/auto(溢出才显示滚动条)/scroll(滚动条) -->
+    </body>
+</html>

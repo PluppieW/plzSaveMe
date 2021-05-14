@@ -1,0 +1,175 @@
+<!-- 网页布局三大核心 盒子模型 浮动 定位 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #a1 {
+            width: 300px;
+            height: 200px;
+            /* 边框宽度 */
+            /* 边框样式 solid实线 dashed虚线 dotted点线 */
+            /* 边框颜色 transparent透明 */
+            border: 5px solid pink;
+        }
+
+        #a2 {
+            width: 300px;
+            height: 200px;
+            border-top: 5px dashed red;
+            border-right: 5px dashed red;
+            border-left: 5px solid rebeccapurple;
+            border-bottom: 2px solid rebeccapurple;
+        }
+
+        #a3 {
+            width: 300px;
+            height: 200px;
+            border-width: 5px;
+            border-style: dotted;
+            border-color: thistle;
+        }
+
+        table {
+            width: 400px;
+            height: 250px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid red;
+            /* 合并相邻边框 */
+            border-collapse: collapse;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        #a4 {
+            width: 190px;
+            height: 190px;
+            background-color: aqua;
+            border: 5px solid salmon;
+        }
+
+        #a5 {
+            width: 190px;
+            height: 190px;
+            font-size: 18px;
+            background-color: skyblue;
+            border: 5px solid salmon;
+            padding: 20px;
+        }
+
+        h1 {
+            height: 200px;
+            background-color: aqua;
+            padding: 30px;
+        }
+
+        #a6 {
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        div p {
+            padding: 20px;
+            background-color: blueviolet;
+        }
+
+        #a7 {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin-bottom: 20px;
+        }
+
+        #a8 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: chocolate;
+            margin-top: 50px;
+            /* border: 1px solid transparent; */
+            /* padding: 1px; */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- border 边框 可设置宽度 样式 颜色 -->
+    <div id="a1"></div>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <!-- border-collapse 控制相邻单元格边框 -->
+    <table align="center" cellspacing="0">
+        <thead>
+            <tr>
+                <th>111</th>
+                <th>222</th>
+                <th>333</th>
+                <th>444</th>
+                <th>555</th>
+                <th>666</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>111</td>
+                <td>2222</td>
+                <td>3333</td>
+                <td>4444</td>
+                <td>5555</td>
+                <td>6666</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="a4"></div>
+    <!-- padding 内边距 -->
+    <!-- padding复合写法 同理margin -->
+    <!-- padding:5px;上下左右5px; padding:5px 10px;上下5px,左右10px; -->
+    <!-- padding:5px 10px 20px;上5px 左右10px 下20px; -->
+    <!-- padding:5px 10px 20px 30px;上5px 右10px 下20px 左30px; -->
+    <!-- !border padding 影响盒子的实际大小 -->
+    <!-- 如果盒子没有指定w/h属性，padding不会撑开盒子大小 -->
+    <div id="a5">内容内容内容内容内容</div>
+    <h1>测试测试测试测试测试测试</h1>
+    <div id="a6">
+        <p>123</p>
+    </div>
+    <!-- margin 外边距 控制盒子和盒子之间的距离 -->
+    <div id="a7">111</div>
+    <div id="a8">222</div>
+    <!-- margin 外边距塌陷问题 两个嵌套关系（父子关系）的块元素，父子同时拥有外边距时，父元素会他先较大的外边距值 -->
+    <!-- 解决方案  为父元素定义上边框或内边距或添加overflow:hidden -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

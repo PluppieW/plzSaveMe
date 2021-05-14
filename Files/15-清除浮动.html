@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 3:after */
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        /* 4双伪 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 清除浮动 clear:both/left/right -->
+    <!-- 清除浮动方法 1-额外标签法 2-父级添加overflow:hidden 3-父级添加:after 4-父级添加双伪元素 -->
+</body>
+
+</html>

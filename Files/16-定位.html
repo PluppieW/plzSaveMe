@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>定位</title>
+        <style>
+            .box {
+                position: absolute;
+                left: 50%;
+                margin-left: -100px;
+                top: 50%;
+                margin-top: -100px;
+                width: 200px;
+                height: 200px;
+                background-color: brown;
+            }
+            .box1 {
+                position: relative;
+                top: 100px;
+                left: 100px;
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+            .box2 {
+                width: 200px;
+                height: 200px;
+                background-color: blueviolet;
+            }
+            .father {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background-color: blue;
+            }
+            .son {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                width: 200px;
+                height: 200px;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- position定位=定位模式+边偏移 -->
+        <!-- position:static静态/relative相对/absolute绝对/fixed固定 -->
+        <!-- position:static(默认，无定位，无边偏移) -->
+        <!-- !position:relative(移动时的参照点时原来位置；不脱标，继续保留原来位置) -->
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <!-- !position:absolute(根据父级元素移动，如无父级元素或父级元素无定位，则以浏览器定位) -->
+        <!-- !position:absolute(如果父级元素有定位，则以最近一级有定位的父级元素为参考点移动) -->
+        <!-- !position:absolute(脱标，不占有原来位置) -->
+        <!-- 子级是绝对定位的话，父级要用相对定位 -->
+        <div class="father">
+            <div class="son"></div>
+        </div>
+        <!-- !position:fixed(以浏览器可视窗口为参照移动；脱标，不占有原来位置) -->
+        <!-- !tips:固定在版心右侧位置 position:fixed left:50%;margin-left:版心的一半 -->
+        <!-- position:sticky 以浏览器可视窗口为参照移动；不脱标，占有原来位置；必须添加top/left/right/bottom其中一个才生效 -->
+        <!-- z-index 定位叠放次序 z-index:正、负整数或0；只有定位的盒子才有z-index属性 -->
+        <!-- 绝对定位的盒子不能通过margin水平居中 -->
+        <div class="box"></div>
+    </body>
+</html>

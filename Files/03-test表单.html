@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+<body>
+    <!-- 表单域 表单控件(元素) 提示信息 -->
+    <!-- action=url地址 method=提交方式(get/post) name=表单域名称 -->
+    <form action="demo.php" method="POST" name="name1">
+        <!-- 表单元素 -->
+        <!-- input输入表单元素 -->
+        <!-- text 文本框 -->
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="6" />
+        <br />
+        <!-- password 密码框 -->
+        密码：<input type="password" name="psw" /> <br />
+        <!-- radio 单选按钮 -->
+        <!-- name定义名称 value定义值 checked规定input元素首次加载被选中,针对单选复选 maxlength规定输入字段字符最大长度 -->
+        性别 男 <input type="radio" name="sex" value="男" /> 女
+        <input type="radio" name="33" value="女" /> <br />
+        <!-- checkbox 复选框 -->
+        爱好：吃饭 <input type="checkbox" name="hobby" value="吃饭" /> 睡觉
+        <input type="checkbox" name="hobby" value="睡觉" /> 游戏
+        <input type="checkbox" name="hobby" value="游戏" /> <br />
+        <!-- submit提交表单域给后台服务器 -->
+        <input type="submit" value="免费注册" />
+        <!-- reset还原表单元素初始默认状态 -->
+        <input type="reset" value="重新填写" />
+        <!-- button按钮 后期结合JavaScript使用 -->
+        <input type="button" value="获取短信验证" /> <br />
+        <!-- file上传文件 -->
+        上传头像：<input type="file" name="upload" />
+        <hr />
+    </form>
+    <form action="demo.php" method="POST" name="name2">
+        <!-- lable 为input定义标注，绑定表单元素，增加用户体验 -->
+        <label for="text">用户名：</label>
+        <input type="text" name="username" id="text" /> <br />
+        性别 <input type="radio" name="sex" id="male" />
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="female" />
+        <label for="female">女</label> <br />
+        <!-- select下拉表单元素 -->
+        籍贯：<select name="loc" id="location">
+            <option value="11">11</option>
+            <option value="22">22</option>
+            <option value="33">33</option>
+            <option value="44">44</option>
+            <option value="55">55</option>
+            <option value="66">66</option>
+            <option value="77" selected="selected">77</option>
+        </select>
+        <br />
+        <!-- textarea文本域元素 -->
+        个人说明：<textarea name="" id="" cols="50" rows="10"> </textarea>
+    </form>
+</body>
+
+</html>
